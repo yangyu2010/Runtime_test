@@ -50,7 +50,7 @@ Runtime 的初体验
 
 	+ (void)load {
 
-    	/// 获取当前class的事例方法
+    	/// 获取当前class的实例方法
     	//class_getInstanceMethod(__unsafe_unretained Class cls, <#SEL name#>)
     	/// 获取当前class的类方法
     	//class_getClassMethod(<#__unsafe_unretained Class cls#>, <#SEL name#>)
