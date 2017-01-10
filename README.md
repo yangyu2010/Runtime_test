@@ -17,15 +17,18 @@ Runtime 的初体验
 		
 二. 交叉方法
 	
-	1.交叉方法在AFN中的使用
+1.交叉方法在AFN中的使用
+	
 	//AFURLSessionManager.h
 	static inline void af_swizzleSelector(Class theClass, SEL originalSelector, SEL swizzledSelector) {
     	   Method originalMethod = class_getInstanceMethod(theClass, originalSelector);
    		   Method swizzledMethod = class_getInstanceMethod(theClass, swizzledSelector);
     	   method_exchangeImplementations(originalMethod, swizzledMethod);
-}
+	}
 
-	//调用
+
+2.调用
+
     + (void)swizzleResumeAndSuspendMethodForClass:(Class)theClass {
     
    			Method afResumeMethod = class_getInstanceMethod(self, @selector(af_resume));
@@ -44,6 +47,8 @@ Runtime 的初体验
 	/// NSURLSession.h
 	- (void)suspend;		//暂停任务
 	- (void)resume;		//启动任务
+
+
 
 
 我重写了UIImageView的setImage方法
