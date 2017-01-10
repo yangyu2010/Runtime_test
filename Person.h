@@ -10,7 +10,6 @@
 
 @interface Person : NSObject
 {
-
     NSString *daxigua;
 }
 

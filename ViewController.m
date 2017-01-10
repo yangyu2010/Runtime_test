@@ -32,13 +32,13 @@
 
 
 - (void)setProperty {
-    //
+    
+    //1.
+    //NSArray *arr = [Person getAllProperties];
     //NSLog(@"viewDidLoad == %@",arr);
     
-    
-    
-    //NSArray *arr = [Person getAllProperties];
 
+    //2.
     //    Person *p = [Person objcetWithDict:@{
     //                                         @"name" : @"zhangsan",
     //                                         @"age" : @18,

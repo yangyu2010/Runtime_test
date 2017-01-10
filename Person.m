@@ -19,24 +19,8 @@ void dynamicMethodIMP(id self , SEL _cmd) {
 
 //@dynamic indentifyNumber;
 
-- (NSString *)description {
-
-    NSArray *arr = @[@"name",@"age",@"height"];
-    return [self dictionaryWithValuesForKeys:arr].description;
-}
-
-
-
-
 //+ (BOOL)resolveClassMethod:(SEL)sel {
-//
-//    
 //    //class_addMethod(<#__unsafe_unretained Class cls#>, <#SEL name#>, <#IMP imp#>, <#const char *types#>)
-////    if (sel == @selector()) {
-////        <#statements#>
-////    }
-//    
-//   
 //}
 
 @end
