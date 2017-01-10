@@ -10,12 +10,39 @@
 #import <objc/runtime.h>
 #import <objc/objc.h>
 
-void dynamicMethodIMP(id self , SEL _cmd) {
-    
-    
+@implementation Person
+
++(Person *)sharedManager {
+    static Person *sharedManager;
+    static dispatch_once_t onceTest;
+    dispatch_once(&onceTest, ^{
+        sharedManager = [[Person alloc] init];
+    });
+    NSLog(@"+ method");
+    return sharedManager;
 }
 
-@implementation Person
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self = [super init];
+        self.height = 1.88f;
+        self.age = 19;
+        self.name = @"DAXIGUA";
+    }
+    return self;
+}
+
++ (void)classPrint {
+    NSLog(@"this is a class method");
+}
+
+- (void)instancePrint {
+    NSLog(@"this is a instance method");
+}
+
 
 //@dynamic indentifyNumber;
 

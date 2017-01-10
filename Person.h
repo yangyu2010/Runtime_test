@@ -21,4 +21,12 @@
 
 @property (nonatomic , copy) NSString *indentifyNumber;
 
++ (Person *)sharedManager;
+
+- (instancetype)init;
+
++ (void)classPrint;
+
+- (void)instancePrint;
+
 @end
